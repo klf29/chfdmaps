@@ -1,8 +1,0 @@
-__ cronjob to clean old entries
-__ something else to clean old entries
-__ all urls are secured
-x_ valid senders in the DB
-x_ email from valid sources
-__ email with valid subject
-x_ valid users in the DB
-__ procedures to maintain users in the DB
