@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+     <br>Cayuga Heights Fire Department<br>
+  </head>
+  <body>
+    {% for usr in mapviewers %}
+    <b>{{usr.loginuser}} {{ usr.realname }} {{usr.added}} }</b><br>
+    {% endfor %}
+
+    <hr>
+
+
+  </body>
+</html>
+{% endautoescape %}

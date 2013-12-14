@@ -1,0 +1,37 @@
+application: chfdmaps
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /css
+  static_dir: css
+- url: /data
+  static_dir: data
+- url: /img
+  static_dir: img
+- url: /js
+  static_dir: js
+
+
+- url: /_ah/mail/.+
+  script: chmaps.application
+  login: admin
+
+- url: /showusers
+  script: usermaint.application
+
+- url: /.*
+  script: chmaps.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+inbound_services:
+- mail

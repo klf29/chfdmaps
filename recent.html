@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+     <br>Cayuga Heights Fire Department<br>
+  </head>
+  <body>
+    {% for incident in incidents %}
+    <b>{{incident.incidentid}} <br>{{ incident.address }} {{incident.date}} {{incident.sender}}{{incident.subject}}</b> was:
+      <blockquote>{{ incident.content }}</blockquote>
+    {% endfor %}
+
+    <hr>
+
+
+  </body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map_canvas {
+  height: 100%;
+}
+
+@media print {
+  html, body {
+    height: auto;
+  }
+
+  #map_canvas {
+    height: 650px;
+  }
+}
+
+#directionsPanel { font-size: .75em; float: right; width: 35%; height: 100%; }
+#map_canvas { float: left; width: 64.5%; height: 100%; }
+#map_canvas2 { float: right; width: 35%; height: 30%; }
+#custaddr { float: right; margin-top: 10px; }
+#calc_route { float: right; margin-top: 10px; margin-right: 5px; }
+#home { margin-top: 10px; float: right; margin-right: 15px; }
+body { background-color: #CBC9F5; }
