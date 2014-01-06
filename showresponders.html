@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+     <br>Cayuga Heights Fire Department<br>
+  </head>
+  <body>
+      <table border="1">
+          <tr> <th>Destination</th><th>Identity</th> <th>Arrival</th>  </tr>
+         {% for usr in tostation %}
+              <tr> <td width=05%> {{usr.respdest}} </td> 
+                   <td width=20%> {{usr.realname}}/{{ usr.firerank }}/{{ usr.emsrank }}</td><td width=10%>{{usr.respdelta}}</tr>  
+              </tr>
+         {% endfor %}
+         {% for usr in toscene %}
+              <tr> <td width=05%> {{usr.respdest}} </td> 
+                   <td width=20%> {{usr.realname}}/{{ usr.firerank }}/{{ usr.emsrank }}</td><td width=10%>{{usr.respdelta}}</tr>  
+              </tr>
+         {% endfor %}
+      </table>
+         <br><a href="m" </a>Home
+         <br><a href="forcelogin" </a>Logout
+         <br><a href="respond" </a>Respond
+         <br><a href="showusers" </a>Show Users
+         <br><a href="showresponders" </a>Show Responders
+
+
+  </body>
+</html>
+{% endautoescape %}

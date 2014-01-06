@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+     <br>Cayuga Heights Fire Department<br>
+  </head>
+  <body>
+    <form action="/addusertodb" method="post">
+      <br>Active:    <input type=text   name="active"   size="1"  value="{{ active }}" {{ readonlyflag }}>
+      <br>ID number: <input type=number name="chfdidno" size="4"  value="{{ idno }}" {{ readonlyflag }}>
+      <br>Dept mail: <input type=email  name="chfduser" size="60" value="{{ email }}" {{ readonlyflag }}>
+      <br>Alt email: <input type=email  name="authuser" size="60" placeholder="lastname@gmail.com" value="{{ authuser }}" >  
+      <br>Full name: <input type="text" name="realname" rows="1"  size="60" value="{{ realname }}" >
+      <br>Nickname:  <input type="text" name="nickname" rows="1"  size="8" value="{{ nickname }}" >
+      <br>
+      <br>Fire rank:
+      <input type="radio" name="Fire" value="Officer" {{ frchk[0] }}>Officer
+      <input type="radio" name="Fire" value="Fast"{{ frchk[1] }}>Fast
+      <input type="radio" name="Fire" value="Int"{{ frchk[2] }}>Int
+      <input type="radio" name="Fire" value="Ext"{{ frchk[3] }}>Ext
+      <input type="radio" name="Fire" value="Prob" {{ frchk[4] }}>Prob
+      <br>EMS rank:
+      <input type="radio" name="EMT" value="Paramedic" {{ emchk[0] }}>Paramedic
+      <input type="radio" name="EMT" value="CC"{{ emchk[1] }}>CC
+      <input type="radio" name="EMT" value="AEMT"{{ emchk[2] }}>AEMT
+      <input type="radio" name="EMT" value="EMT-B"{{ emchk[3] }}>EMT-B
+      <input type="radio" name="EMT" value="RescueSquad" {{ emchk[4] }}>RescueSquad
+      <input type="radio" name="EMT" value="N/A" {{ emchk[5] }}>N/A
+      <br>Driver:
+          <input type="checkbox" name="drives" value="ALL">ALL
+          <input type="checkbox" name="drives" value="202">202
+          <input type="checkbox" name="drives" value="203">203
+          <input type="checkbox" name="drives" value="231">231
+          <input type="checkbox" name="drives" value="241">241
+          <input type="checkbox" name="drives" value="242">242
+
+      <br><input type="submit" value="Add/Edit firefighter">
+    </form>
+
+    <br><a href="m" </a>Home
+    <br><a href="forcelogin" </a>Logout
+    <br><a href="respond" </a>Respond
+    <br><a href="showusers" </a>Show Users
+    <br><a href="showresponders" </a>Show Responders
+
+  </body>
+</html>
+{% endautoescape %}
+
+
+

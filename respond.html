@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+     Cayuga Heights Fire Department<br>
+  </head>
+  <body>
+    <form action="/respond" method="post">
+      <br>
+      <br>Destination:
+          <input type="radio" name="dest" value="Station" checked>Station
+          <input type="radio" name="dest" value="Scene">Scene
+      <br><input type="submit" name="eta" value="2">
+          <input type="submit" name="eta" value="4">
+          <input type="submit" name="eta" value="6">
+          <input type="submit" name="eta" value="8">
+          <input type="submit" name="eta" value="10">
+          <input type="submit" name="eta" value="15">
+          <input type="submit" name="eta" value="cancel">
+    </form>
+    <br><a href="m" </a>Home
+    <br><a href="forcelogin" </a>Logout
+    <br><a href="showusers" </a>Show Users
+    <br><a href="showresponders" </a>Show Responders
+
+  </body>
+</html>
+{% endautoescape %}
+
+
+
